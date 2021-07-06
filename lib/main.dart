@@ -31,11 +31,11 @@ class _MyHomePageState extends State<MyHomePage> {
   
   List<String> titleList = ["Amazon","楽天","Yahoo!"];
 
-  void _incrementCounter() {
-    setState(() {
+  // void _incrementCounter() {
+  //   setState(() {
       
-    });
-  }
+  //   });
+  // }
 
   @override
   // アプリのUIを作成している部分
@@ -61,8 +61,17 @@ class _MyHomePageState extends State<MyHomePage> {
           );
         },
         ),
+
+
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: () {
+          // ボタンが押された時の処理
+          titleList.add("Google");
+          print(titleList);
+          setState(() {
+            
+          });
+        },
         tooltip: 'Increment',
         child: Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
@@ -71,7 +80,6 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 
-// todo リスト表示を動的に
 // todo フロートアクションボタンをタップ時にリストを一つ追加表示
 // todo 新しい画面を作成し、リストをタップしたときに遷移
 // todo 新しい画面のレイアウト作成
