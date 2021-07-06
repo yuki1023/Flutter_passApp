@@ -54,16 +54,22 @@ class _MyHomePageState extends State<MyHomePage> {
             leading: Icon(Icons.vpn_key),
             title: Text("Amazon"),
           ),
+          // 線
+          Divider(thickness: 2,),
           ListTile(
             // セルみたいな
             leading: Icon(Icons.vpn_key),
             title: Text("楽天"),
           ),
+          // 線
+          Divider(thickness: 2,),
           ListTile(
             // セルみたいな
             leading: Icon(Icons.vpn_key),
             title: Text("Yahoo!"),
           ),
+          // 線
+          Divider(thickness: 2,),
         ],
       ),
       floatingActionButton: FloatingActionButton(
@@ -75,7 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-// todo リストを表示
+
 // todo リスト間に区切り線を表示
 // todo リスト表示を動的に
 // todo フロートアクションボタンをタップ時にリストを一つ追加表示
