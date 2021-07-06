@@ -3,7 +3,9 @@ class NextPage extends StatefulWidget {
   // 値渡しの受け皿
   final String title;
 // titleと言う変数に入れられる
-  NextPage(this.title);
+  NextPage(
+    this.title,
+    );
   @override
   _NextPageState createState() => _NextPageState();
 }
@@ -31,7 +33,7 @@ class _NextPageState extends State<NextPage> {
                   width: 20,
                   child: Text(":"),
                 ),
-                Text("毎回同じIDを表示"),
+                Text("IDが入ります"),
                 
               ],
             ),
@@ -47,7 +49,7 @@ class _NextPageState extends State<NextPage> {
                   width: 20,
                   child: Text(":"),
                 ),
-                Text("毎回同じPWを表示"),
+                Text("Passが入ります"),
                 
               ],
             ),

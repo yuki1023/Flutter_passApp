@@ -31,6 +31,8 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   
   List<String> titleList = ["Amazon","楽天","Yahoo!"];
+  List<String> idList = ["1","2","3"];
+  List<String> passList = ["4","5","6"];
 
   // void _incrementCounter() {
   //   setState(() {
@@ -56,7 +58,10 @@ class _MyHomePageState extends State<MyHomePage> {
               ListTile(
                 onTap: () {
                   // 画面遷移の処理を記述
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => NextPage(titleList[i])));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => NextPage(titleList[i],
+                    ),
+                    ),
+                    );
                 },
                 leading: Icon(Icons.vpn_key),
                 title: Text(titleList[i]),
@@ -72,6 +77,8 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: () {
           // ボタンが押された時の処理
           titleList.add("Google");
+          idList.add("10");
+          passList.add("20");
           print(titleList);
           setState(() {
             
