@@ -28,11 +28,11 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+  
 
   void _incrementCounter() {
     setState(() {
-      _counter++;
+      
     });
   }
 
@@ -46,20 +46,25 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text("パスワードポスト"),
       ),
-      body: Center(
-        child: Column(
-          
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
+      body: ListView(
+        // ListView=テーブルビューみたいな
+        children: [
+          ListTile(
+            // セルみたいな
+            leading: Icon(Icons.vpn_key),
+            title: Text("Amazon"),
+          ),
+          ListTile(
+            // セルみたいな
+            leading: Icon(Icons.vpn_key),
+            title: Text("楽天"),
+          ),
+          ListTile(
+            // セルみたいな
+            leading: Icon(Icons.vpn_key),
+            title: Text("Yahoo!"),
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
@@ -70,7 +75,6 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-// todo ホーム画面のタイトル変更
 // todo リストを表示
 // todo リスト間に区切り線を表示
 // todo リスト表示を動的に
