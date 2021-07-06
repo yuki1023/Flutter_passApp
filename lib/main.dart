@@ -29,6 +29,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   
+  List<String> titleList = ["Amazon","楽天","Yahoo!"];
 
   void _incrementCounter() {
     setState(() {
@@ -46,32 +47,20 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text("パスワードポスト"),
       ),
-      body: ListView(
-        // ListView=テーブルビューみたいな
-        children: [
-          ListTile(
-            // セルみたいな
-            leading: Icon(Icons.vpn_key),
-            title: Text("Amazon"),
-          ),
-          // 線
-          Divider(thickness: 2,),
-          ListTile(
-            // セルみたいな
-            leading: Icon(Icons.vpn_key),
-            title: Text("楽天"),
-          ),
-          // 線
-          Divider(thickness: 2,),
-          ListTile(
-            // セルみたいな
-            leading: Icon(Icons.vpn_key),
-            title: Text("Yahoo!"),
-          ),
-          // 線
-          Divider(thickness: 2,),
-        ],
-      ),
+      body: ListView.builder(
+        itemCount: titleList.length,
+        itemBuilder: (BuildContext context, int i){
+          return   Column(
+            children :[
+              ListTile(
+                leading: Icon(Icons.vpn_key),
+                title: Text(titleList[i]),
+             ),
+             Divider(thickness: 2),
+            ],
+          );
+        },
+        ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
@@ -82,7 +71,6 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 
-// todo リスト間に区切り線を表示
 // todo リスト表示を動的に
 // todo フロートアクションボタンをタップ時にリストを一つ追加表示
 // todo 新しい画面を作成し、リストをタップしたときに遷移
